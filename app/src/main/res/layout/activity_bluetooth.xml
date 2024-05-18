@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_toggle"
+        android:layout_width="166dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="23dp"
+        android:text=" 블루투스 켜기/끄기"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/button_pair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_pair" />
+
+    <Button
+        android:id="@+id/button_pair"
+        android:layout_width="166dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="67dp"
+        android:text="블루투스리스트"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/device_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_toggle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/device_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="248dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pair" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

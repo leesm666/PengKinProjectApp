@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155444620628",
+    "project_id": "pengkinprojectapp",
+    "storage_bucket": "pengkinprojectapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155444620628:android:ed46813f99c93995df6cc1",
+        "android_client_info": {
+          "package_name": "com.example.pengkinprojectapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-cvFffPv2x6qLLwCJi9ri5jyz8UB5eUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

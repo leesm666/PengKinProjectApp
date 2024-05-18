@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PengKinProjectApp</string>
+
+
+    <string name="name">이름</string>
+    <string name="id">아이디</string>
+    <string name="ps">비밀번호</string>
+    <string name="ps_confirm">비밀번호 확인</string>
+    <string name="protector">보호자 연락처</string>
+    <string name="login">로그인</string>
+    <string name="join_doc">펭킨이 처음이라면?</string>
+    <string name="join">회원가입</string>
+</resources>
