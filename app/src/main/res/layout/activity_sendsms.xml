@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/widget28"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/label1" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="보호자 전화번호"
+        android:textSize="12sp">
+    </TextView>
+
+    <TextView android:id="@+id/pNum" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="전화번호"
+        android:textSize="12sp">
+    </TextView>
+
+
+    <Button android:id="@+id/button" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="전송">
+    </Button>
+</LinearLayout>

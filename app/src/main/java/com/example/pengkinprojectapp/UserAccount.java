@@ -10,6 +10,8 @@ public class UserAccount {
     private String emailId;     // 이메일 아이디
     private String password;    // 비밀번호
 
+    private String phoneNum;  // 보호자 전화번호
+
 
 
     public UserAccount() {
@@ -39,4 +41,13 @@ public class UserAccount {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
 }

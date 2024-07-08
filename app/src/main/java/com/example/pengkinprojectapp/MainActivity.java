@@ -43,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_ss = findViewById(R.id.btn_ss);
+        btn_ss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Sendsms.class);
+                startActivity(intent);
+            }
+        });
+
         // 탈퇴 처리
         // mFirebaseAuth.getCurrentUser().delete();
 
