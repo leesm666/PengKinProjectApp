@@ -66,25 +66,19 @@ public class Comunication extends AppCompatActivity {
                             {   // 'g'값 아두이노로 전송
                                 btSocket.getOutputStream().write("g".toString().getBytes());
                             }
-
                             catch (IOException e) //오류 예외처리
                             {
-
                             }
                             break;
-
                         case MotionEvent.ACTION_UP:
                             try
                             {    // 정지인 's'값 전송
                                 btSocket.getOutputStream().write("s".toString().getBytes());
                             }
-
                             catch (IOException e)
                             {
-
                             }
                             break;
-
                     }
 
 

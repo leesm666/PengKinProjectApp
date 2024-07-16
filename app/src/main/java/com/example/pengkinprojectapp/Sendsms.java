@@ -64,14 +64,14 @@ public class Sendsms extends AppCompatActivity {
                         {
                             public void onClick(View v)
                             {
-                                int gaslevel = 200; //가스 수치 임의값
+                                int gaslevel = 400; //가스 수치 임의값
 
                                 String message= "가스 누출 경고문자";
-                                if (value.length()>0 && gaslevel==200)
+                                if (value.length()>0 && gaslevel>300)
                                     __sendSMS(value, message);
                                 else
                                     Toast.makeText(getBaseContext(),
-                                            "Please enter both phone number and message.",
+                                            "전화번호 값이 없습니다.",
                                             Toast.LENGTH_SHORT).show();
                             }
                         });

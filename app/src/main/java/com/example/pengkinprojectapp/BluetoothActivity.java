@@ -147,7 +147,7 @@ public class BluetoothActivity extends AppCompatActivity {
             String info = ((TextView) view).getText().toString();
             String address = info.substring(info.length()-17); //주소 정의
 
-            Intent comintent = new Intent (BluetoothActivity.this, Comunication.class);
+            Intent comintent = new Intent (BluetoothActivity.this, GasSensor.class);
             comintent.putExtra(EXTRA_ADRESS,address ); //레이아웃 전송
             startActivity(comintent);
         }

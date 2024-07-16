@@ -62,6 +62,9 @@
         <activity
             android:name=".BluetoothActivity"
             android:required="false" />
+        <activity
+            android:name=".GasSensor"
+            android:required="false" />
     </application>
 
 </manifest>
