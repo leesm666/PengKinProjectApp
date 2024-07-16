@@ -68,6 +68,9 @@ public class GasSensor extends Activity {
     private DatabaseReference mDatabaseRef; // 실시간 데이터베이스
 
 
+    int gaslevel;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,7 +145,6 @@ public class GasSensor extends Activity {
 
 //                                    int text = Integer.parseInt(new String(encodedBytes, "UTF-8"));
 
-                                    int gaslevel;
                                     try {
                                         gaslevel = Integer.parseInt(text.trim());
                                     } catch (NumberFormatException ex) {
@@ -151,6 +153,7 @@ public class GasSensor extends Activity {
                                     }
                                     System.out.println(gaslevel);
                                     readBufferPosition = 0;
+
 
 
                                     handler.post(new Runnable() {
@@ -172,7 +175,6 @@ public class GasSensor extends Activity {
                                                             userGuardian.setText(value);
 
 
-                                                            int gaslevel =0;
                                                             String message = "가스 누출 경고문자";
                                                             if (value.length() > 0 && gaslevel > 400) {
                                                                 __sendSMS(value, message);
