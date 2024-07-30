@@ -83,10 +83,19 @@ public class GasSensor extends Activity {
         mylabel = (TextView) findViewById(R.id.air);
         userGuardian = findViewById(R.id.userGuardian);
 
-
+        Button editBtn = (Button) findViewById(R.id.editBtn);
         new BTbaglan().execute();
 
 //        receiveData();
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GasSensor.this, WebRcCar.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         autoBtn.setOnClickListener(new View.OnClickListener() {
@@ -175,7 +184,7 @@ public class GasSensor extends Activity {
                                                             userGuardian.setText(value);
 
 
-                                                            String message = "가스 누출 경고문자";
+                                                            String message = "펭킨이 감지된 감스 값이"+gaslevel+"으로, 위험 수치 400값을 넘었습니다.";
                                                             if (value.length() > 0 && gaslevel > 400) {
                                                                 __sendSMS(value, message);
                                                                 Toast.makeText(getBaseContext(), "문자 전송 완료",
@@ -246,7 +255,7 @@ public class GasSensor extends Activity {
     private void __sendSMS(String phoneNumber, String message)
     {
         PendingIntent pi = PendingIntent.getActivity(this, 0,
-                new Intent(this, Sendsms.class), PendingIntent.FLAG_IMMUTABLE);
+                new Intent(this, GasSensor.class), PendingIntent.FLAG_IMMUTABLE);
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, message, pi, null);
         Toast.makeText(getBaseContext(), "문자 전송 완료", Toast.LENGTH_SHORT).show();

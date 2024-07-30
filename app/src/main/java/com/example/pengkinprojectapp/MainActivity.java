@@ -52,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button btn_wb = findViewById(R.id.btn_wb);
+        btn_wb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WebRcCar.class);
+                startActivity(intent);
+            }
+        });
+
         // 탈퇴 처리
         // mFirebaseAuth.getCurrentUser().delete();
 
